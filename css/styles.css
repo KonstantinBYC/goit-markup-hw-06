@@ -517,10 +517,16 @@ address {
 .form-box {
   display: flex;
   flex-direction: column;
-  /* border: 1px solid red; */
+  width: 459px;
+
   margin-left: 80px;
   margin-bottom: 0px;
 }
+
+.form-footer {
+  display: flex;
+}
+
 .subs-title {
   display: block;
   font-family: inherit;
@@ -542,52 +548,54 @@ address {
   color: var(--main-title-color);
   border: 1px solid #ffffff;
   border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.email-foot:hover,
+.email-foot:focus {
+  border-color: var(--primary-brand-color);
+}
+.email-foot::placeholder {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: var(--main-title-color);
+}
+.subscribe {
+}
+
 .subscribe-but {
   width: 165px;
   height: 40px;
-  font-family: inherit;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  text-align: left;
 
   background-color: var(--primary-brand-color);
   color: var(--main-title-color);
-  padding-left: 24px;
-  padding-right: 0px;
+  padding: 8px auto 8px 24px;
+
   border: none;
   border-radius: 4px;
-  margin-left: 23px;
+  margin-left: 24px;
   cursor: pointer;
-  position: relative;
+  outline: none;
+
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-send {
   fill: var(--main-title-color);
-  position: absolute;
+  margin-bottom: -4px;
+  margin-left: 16px;
 }
 .subscribe-but:hover,
 .subscribe-but:focus {
   background-color: var(--pressed-state-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-
-/* .subscribe-but::after {
-  content: '';
-  width: 20px;
-  height: 20px;
-  background-image: url('./images/icons.svg#icon-send');
-  background-position: center;
-  background-size: cover;
-  display: inline-block;
-   display: inline-block;
-  position: absolute;
-
-  top: 10px;
-  left: 121px;
-} */
 
 /* -------------------------social-links--------------------------- */
 .social {
@@ -624,7 +632,6 @@ address {
 .social-item:hover,
 .social-item:focus {
   background-color: var(--success-color);
-  border-radius: 50%;
 }
 
 /* ---------------------portfolio ---------------------------*/
@@ -846,6 +853,7 @@ address {
   outline: none;
 
   cursor: text;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-item:hover,
@@ -867,6 +875,7 @@ address {
   border: 1px solid rgba(33, 33, 33, 0.2);
   outline: none;
   border-radius: 4px;
+  margin-top: 4px;
   padding-top: 8px;
   padding-left: 16px;
   padding-bottom: 27%;
@@ -885,16 +894,11 @@ address {
   padding: 8px auto auto 16px;
 }
 .privacy {
+  display: block;
   color: var(--primary-brand-color);
   text-decoration: underline;
-  margin-bottom: 24px;
 }
-/* .icon-check {
-  position: absolute;
-  fill: var(--secondary-title-color);
-  top: 506px;
-  left: 28px;
-} */
+
 .form-checkbox {
   font-weight: 400;
   font-size: 12px;
@@ -902,16 +906,14 @@ address {
   letter-spacing: 4%;
   color: var(--subtle-text-color);
 
-  border: 1px solid red;
-
   display: flex;
   width: 100%;
+  align-items: center;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .privacy {
-  display: block;
 }
 .form-checkbox span {
   display: flex;
